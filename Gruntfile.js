@@ -27,7 +27,7 @@ module.exports = function (grunt) {
         baseUrl: 'src/js',        // base url
         startFile: 'intro.js',    // intro part
         endFile: 'outro.js',      // outro part
-        outFile: 'dist/summernote.js' // out file
+        outFile: 'js/summernote/summernote.js' // out file
       }
     },
 
@@ -42,7 +42,7 @@ module.exports = function (grunt) {
         }
       },
       dist: {
-        src: 'dist/summernote.js',
+        src: 'js/summernote/summernote.js',
         options: readOptionalJSON('.jshintrc')
       }
     },
@@ -55,7 +55,7 @@ module.exports = function (grunt) {
     // uglify: minify javascript
     uglify: {
       all: {
-        files: { 'dist/summernote.min.js': ['dist/summernote.js'] }
+        files: { 'js/summernote/summernote.min.js': ['js/summernote/summernote.js'] }
       }
     },
 
@@ -64,7 +64,7 @@ module.exports = function (grunt) {
       dist: {
         options: { compile: true, compress: true },
         files: {
-          'dist/summernote.css': ['src/less/summernote.less']
+          'css/summernote/summernote.css': ['src/less/summernote.less']
         }
       }
     },
